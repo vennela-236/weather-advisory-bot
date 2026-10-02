@@ -103,6 +103,8 @@ The advice depends on the weather data returned for the requested location and t
 
 The SOPs are stored in `backend/app/policies/sops.json`.
 
+Why JSON? It keeps the procedures structured and easy to add or update without changing the matching code.
+
 Each SOP includes:
 
 - `id`: A unique identifier
