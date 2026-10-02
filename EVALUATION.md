@@ -40,6 +40,8 @@ Tested these question patterns:
 | Cycling in Bhopal: "Is it safe to bike to work in Bhopal today?" | Give a transparent response when no cycling SOP triggers | Reported selected-period wind speed and gusts and stated that this does not guarantee safety. | Pass with limitation: exact SOP threshold evidence is not shown |
 | Picnic in Bhopal | Extract location from natural wording | Initial attempt failed because "Bhopal be suitable" was treated as the city. Location parsing was corrected and tested separately. | Fixed and verified by location tests |
 
+
+
 ## 4. Required evaluation cases
 
 ### Live severe-weather grounding
@@ -70,4 +72,5 @@ The automated suite includes an adversarial prompt intended to test whether user
 2. No-match responses should show relevant forecast values and applicable thresholds when available.
 3. The cycling no-match response should clearly distinguish forecast values from the exact weather fields checked by the SOP.
 4. Some SOP advice is written as internal instructions and needs user-facing wording.
-5. Website evaluation is limited to the scenarios recorded above; results may vary with live weather.
+5. Time-only follow-up questions do not consistently retain the earlier activity and location, although some activity-based follow-ups work.
+6. Website evaluation is limited to the scenarios recorded above; results may vary with live weather.

@@ -66,8 +66,6 @@ Install the packages from the project's requirements file:
 pip install -r backend/requirements.txt
 ```
 
-If the file is in a different folder, use its actual path.
-
 ## Run the Application
 
 Start the backend and frontend in separate terminals.
@@ -137,7 +135,7 @@ If nothing matches, the bot returns a no-match response rather than making up sa
 
 ## Follow-up Questions
 
-LangGraph checkpointing is used to retain relevant session context. For example, if a user first asks about cycling in Bhopal and then asks, "What about this evening?", the bot can use the earlier location and activity.
+LangGraph checkpointing is used to retain session context between messages with the same session ID. Follow-up interpretation is still a known limitation: in manual testing, a time-only follow-up did not consistently retain the earlier activity and location.
 
 ## Tests and Evaluation
 
@@ -147,7 +145,7 @@ Run the automated tests from the `backend` directory:
 python -m pytest
 ```
 
-The latest recorded test run had **13 passing tests**.
+The latest automated test run had **13 passing tests**. Manual website checks and known limitations are documented in [EVALUATION.md](EVALUATION.md).
 
 More details, including website checks and known limitations, are in [EVALUATION.md](EVALUATION.md).
 
