@@ -1,0 +1,245 @@
+
+[
+  {
+    "id": "SOP-001",
+    "title": "High Wind Risk for Cycling",
+    "category": "outdoor_exercise",
+    "severity": "high",
+    "applies_to": ["cycling", "biking", "two_wheeler"],
+    "when": {
+      "all": [],
+      "any": [
+        {
+          "field": "current.wind_speed_10m",
+          "operator": "gt",
+          "value": 40
+        }
+      ]
+    },
+    "advice": "Advise against cycling under the observed wind conditions. Explain that strong winds can affect balance and vehicle control. Suggest postponing the ride or choosing an alternative mode of transport.",
+    "reason": "Wind speed exceeds the project's 40 km/h cycling risk threshold."
+  },
+  {
+    "id": "SOP-002",
+    "title": "High UV During Outdoor Exercise",
+    "category": "outdoor_exercise",
+    "severity": "high",
+    "applies_to": ["running", "jogging", "cycling", "walking", "outdoor_exercise"],
+    "when": {
+      "all": [],
+      "any": [
+        {
+          "field": "hourly.uv_index",
+          "operator": "gte",
+          "value": 8
+        }
+      ]
+    },
+    "advice": "Advise against unprotected outdoor exercise during the affected period. Recommend rescheduling to early morning or evening and using sun protection.",
+    "reason": "UV index is 8 or higher."
+  },
+  {
+    "id": "SOP-003",
+    "title": "Extreme Apparent Temperature During Exercise",
+    "category": "outdoor_exercise",
+    "severity": "high",
+    "applies_to": ["running", "jogging", "cycling", "walking", "outdoor_exercise"],
+    "when": {
+      "all": [],
+      "any": [
+        {
+          "field": "current.apparent_temperature",
+          "operator": "gte",
+          "value": 40
+        }
+      ]
+    },
+    "advice": "Advise postponing strenuous outdoor exercise. Recommend moving the activity to a cooler period or an indoor location.",
+    "reason": "Apparent temperature is 40°C or higher."
+  },
+  {
+    "id": "SOP-004",
+    "title": "High Rain Probability During Outdoor Exercise",
+    "category": "outdoor_exercise",
+    "severity": "moderate",
+    "applies_to": ["running", "jogging", "cycling", "walking", "outdoor_exercise"],
+    "when": {
+      "all": [],
+      "any": [
+        {
+          "field": "hourly.precipitation_probability",
+          "operator": "gte",
+          "value": 70
+        }
+      ]
+    },
+    "advice": "Warn that rain is likely during the requested period. Recommend checking conditions before leaving and considering an indoor alternative.",
+    "reason": "Forecast precipitation probability is 70% or higher."
+  },
+  {
+    "id": "SOP-005",
+    "title": "Picnic Suitability Assessment",
+    "category": "leisure",
+    "severity": "contextual",
+    "applies_to": ["picnic", "outdoor_gathering", "leisure"],
+    "when": {
+      "all": [],
+      "any": []
+    },
+    "advice": "For picnic-related questions, provide a balanced suitability assessment using the available weather information, including precipitation probability, temperature, apparent temperature, wind, and weather conditions during the requested period. Do not give an unconditional safe or unsafe verdict. Explain any relevant concerns and state when forecast information is unavailable.",
+    "reason": "Picnic suitability is a qualitative decision involving multiple weather factors rather than one numerical threshold."
+  },
+  {
+    "id": "SOP-006",
+    "title": "High UV Risk for Children at Parks",
+    "category": "vulnerable_groups",
+    "severity": "high",
+    "applies_to": ["children", "kids", "park_visit", "children_outdoors"],
+    "when": {
+      "all": [],
+      "any": [
+        {
+          "field": "hourly.uv_index",
+          "operator": "gte",
+          "value": 8
+        } 
+      ]
+    },
+    "advice": "Advise avoiding prolonged outdoor exposure during the affected period. Suggest rescheduling to a lower-UV period and using appropriate sun protection.",
+    "reason": "UV index is 8 or higher."
+  },
+  {
+    "id": "SOP-007",
+    "title": "Rain Risk for Children's Outdoor Activities",
+    "category": "vulnerable_groups",
+    "severity": "moderate",
+    "applies_to": ["children", "kids", "park_visit", "children_outdoors"],
+    "when": {
+      "all": [],
+      "any": [
+        {
+          "field": "hourly.precipitation_probability",
+          "operator": "gte",
+          "value": 60
+        }
+      ]
+    },
+    "advice": "Warn that rain is possible during the planned activity. Recommend checking the forecast before departure and considering an indoor alternative.",
+    "reason": "Forecast precipitation probability is 60% or higher."
+  },
+  {
+    "id": "SOP-008",
+    "title": "High Apparent Temperature for Elderly People",
+    "category": "vulnerable_groups",
+    "severity": "high",
+    "applies_to": ["elderly", "senior_citizens", "elderly_outdoors"],
+    "when": {
+      "all": [],
+      "any": [
+        {
+          "field": "current.apparent_temperature",
+          "operator": "gte",
+          "value": 38
+        }
+      ]
+    },
+    "advice": "Recommend avoiding prolonged outdoor exposure during the affected period and considering a cooler time or indoor alternative.",
+    "reason": "Apparent temperature is 38°C or higher."
+  },
+  {
+    "id": "SOP-009",
+    "title": "High Apparent Temperature for Pets",
+    "category": "vulnerable_groups",
+    "severity": "high",
+    "applies_to": ["pets", "dogs", "pet_walk", "walking_dog"],
+    "when": {
+      "all": [],
+      "any": [
+        {
+          "field": "current.apparent_temperature",
+          "operator": "gte",
+          "value": 35
+        }
+      ]
+    },
+    "advice": "Recommend postponing non-essential outdoor pet activity to a cooler period. Avoid prolonged exposure to the current heat conditions.",
+    "reason": "Apparent temperature is 35°C or higher."
+  },
+  {
+    "id": "SOP-010",
+    "title": "High Rain Probability During Travel",
+    "category": "travel",
+    "severity": "moderate",
+    "applies_to": ["travel", "commuting", "driving", "two_wheeler", "journey"],
+    "when": {
+      "all": [],
+      "any": [
+        {
+          "field": "hourly.precipitation_probability",
+          "operator": "gte",
+          "value": 70
+        }
+      ]
+    },
+    "advice": "Warn about possible rain-related travel delays. Recommend checking local weather alerts and road conditions before departure.",
+    "reason": "Forecast precipitation probability is 70% or higher."
+  },
+  {
+    "id": "SOP-011",
+    "title": "Thunderstorm Risk During Outdoor Activities",
+    "category": "general_outdoor_safety",
+    "severity": "high",
+    "applies_to": ["outdoor_any"],
+    "when": {
+      "all": [],
+      "any": [
+        {
+          "field": "current.weather_code",
+          "operator": "in",
+          "value": [95, 96, 99]
+        }
+      ]
+    },
+    "advice": "Advise postponing outdoor activities during the indicated thunderstorm conditions. Recommend moving to a safe indoor location.",
+    "reason": "The current weather code indicates a thunderstorm."
+  },
+  {
+    "id": "SOP-012",
+    "title": "Very Strong Wind During Outdoor Activities",
+    "category": "general_outdoor_safety",
+    "severity": "high",
+    "applies_to": ["outdoor_any"],
+    "when": {
+      "all": [],
+      "any": [
+        {
+          "field": "current.wind_gusts_10m",
+          "operator": "gt",
+          "value": 50
+        }
+      ]
+    },
+    "advice": "Warn that very strong wind gusts may create outdoor safety concerns. Recommend postponing exposed outdoor activities.",
+    "reason": "Observed wind gusts exceed 50 km/h."
+  },
+  {
+    "id": "SOP-013",
+    "title": "Active Severe Rainfall System",
+    "category": "general_outdoor_safety",
+    "severity": "critical",
+    "applies_to": ["outdoor_any"],
+    "when": {
+      "all": [
+        {
+          "field": "hazards.active_heavy_rain_system",
+          "operator": "equals",
+          "value": true
+        }
+      ],
+      "any": []
+    },
+    "advice": "Lead with the active severe rainfall system affecting the user's location. Advise against the outdoor activity according to the severity of the official alert. Include relevant verified rainfall and wind observations when available.",
+    "reason": "An active, verified severe rainfall system affects the user's location."
+  }
+] 
+

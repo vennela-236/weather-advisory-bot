@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Advisory Bot</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="app">
+        <header class="app-header">
+            <div>
+                <p class="eyebrow">WEATHER ADVISORY</p>
+                <h1>Plan your day outdoors</h1>
+                <p class="subtitle">
+                    Ask about an outdoor activity and get guidance based on live weather
+                    and written safety procedures.
+                </p>
+            </div>
+            <span class="status" id="connection-status">Checking connection</span>
+        </header>
+
+        <section class="chat-panel" aria-label="Weather advisory conversation">
+            <div class="messages" id="messages" aria-live="polite">
+                <div class="message bot-message">
+                    <p class="message-label">Weather Advisory Bot</p>
+                    <p>
+                        Hello! Ask me something like,
+                        “Can I go cycling in Bhopal today?”
+                    </p>
+                </div>
+            </div>
+
+            <form class="chat-form" id="chat-form">
+                <label class="sr-only" for="message-input">
+                    Your weather question
+                </label>
+                <input
+                    type="text"
+                    id="message-input"
+                    placeholder="Ask about cycling, a picnic, travel..."
+                    autocomplete="off"
+                    required
+                >
+                <button type="submit" id="send-button">Send</button>
+            </form>
+
+            <p class="disclaimer">
+                Advice is based on available weather data and the bot’s written procedures.
+                Always consider local conditions.
+            </p>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
