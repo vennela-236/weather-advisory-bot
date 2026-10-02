@@ -241,5 +241,5 @@
     "advice": "Lead with the active severe rainfall system affecting the user's location. Advise against the outdoor activity according to the severity of the official alert. Include relevant verified rainfall and wind observations when available.",
     "reason": "An active, verified severe rainfall system affects the user's location."
   }
-] 
+]
 

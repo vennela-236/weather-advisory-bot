@@ -40,7 +40,7 @@ Tested these question patterns:
 | Cycling in Bhopal: "Is it safe to bike to work in Bhopal today?" | Give a transparent response when no cycling SOP triggers | Reported selected-period wind speed and gusts and stated that this does not guarantee safety. | Pass with limitation: exact SOP threshold evidence is not shown |
 | Picnic in Bhopal | Extract location from natural wording | Initial attempt failed because "Bhopal be suitable" was treated as the city. Location parsing was corrected and tested separately. | Fixed and verified by location tests |
 
-
+| Dynamic SOP addition | Added a temporary SOP-014 to `sops.json` without changing application code. A walking query triggered its test advice, confirming dynamic loading. Removed the temporary SOP afterward. | Pass |
 
 ## 4. Required evaluation cases
 
