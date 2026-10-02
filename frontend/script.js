@@ -1,4 +1,4 @@
-const API_URL = "http://127.0.0.1:8000/chat";
+const API_URL = "https://weather-advisory-bot-api-vhp0.onrender.com/chat";
 
 const chatForm = document.getElementById("chat-form");
 const messageInput = document.getElementById("message-input");
